@@ -1,7 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import "bootstrap/dist/css/bootstrap.css"
+import './App.css';
+// import App from './App';
+
+// React Context TypeScript
+// import App from "./UsersContext/App"
+// import { UserContextProvider } from './UsersContext/UserContext';
+
+//React UseReducer with Context TypeScript
+import App from "./UserReducer/App"
+import { UserContextProvider } from './UserReducer/UserContext';
+
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +20,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <UserContextProvider>
+      <App />
+    </UserContextProvider>
   </React.StrictMode>
 );
 
